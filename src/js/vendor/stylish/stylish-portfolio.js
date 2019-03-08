@@ -7,7 +7,9 @@
     $("#sidebar-wrapper").toggleClass("active");
     $(".menu-toggle > .fa-bars, .menu-toggle > .fa-times").toggleClass("fa-bars fa-times");
     $(this).toggleClass("active");
-    if($("#sidebar-wrapper").attr("class") === "active") {
+    var sidebarClass = $("#sidebar-wrapper").attr("class");
+    var sideBarIsActive = sidebarClass.includes("active");
+    if(sideBarIsActive) {
       $('.shoping-car').animate({
         right: '17em'
       });

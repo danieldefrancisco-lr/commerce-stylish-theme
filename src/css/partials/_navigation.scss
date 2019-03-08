@@ -1,0 +1,12 @@
+.navbar-stylish {
+    align-items: flex-start;
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+
+        .text-truncate {
+            color: white
+        }
+    }
+}
