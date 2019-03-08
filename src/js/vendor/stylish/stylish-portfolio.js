@@ -7,6 +7,15 @@
     $("#sidebar-wrapper").toggleClass("active");
     $(".menu-toggle > .fa-bars, .menu-toggle > .fa-times").toggleClass("fa-bars fa-times");
     $(this).toggleClass("active");
+    if($("#sidebar-wrapper").attr("class") === "active") {
+      $('.shoping-car').animate({
+        right: '17em'
+      });
+    } else {
+      $('.shoping-car').animate({
+        right: '4em'
+      });
+    }
   });
 
   // Smooth scrolling using jQuery easing
