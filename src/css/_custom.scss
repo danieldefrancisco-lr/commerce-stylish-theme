@@ -66,12 +66,13 @@
 		margin-bottom: 0;
 	}
 
+
+
 }
 
 .commerce-order-items-body {
 	background-color: $commerce-order-items-body-bg;
 	color: $commerce-order-items-body-color;
-	padding-bottom: 9rem;
 	padding-left: 0;
 	padding-right: 0;
 	padding-top: 1.5rem;
@@ -121,7 +122,7 @@
 .commerce-order-items-footer {
 	background-color: $commerce-order-items-footer-bg;
 	color: $commerce-order-items-footer-color;
-	padding: 1.5rem 0;
+	padding: 1.5rem 0 0 0;
 
 	.autofit-row {
 		align-items: center;
