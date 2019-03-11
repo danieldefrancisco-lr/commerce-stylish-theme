@@ -16,7 +16,7 @@
 
 @import "partials/shopping_car";
 @import "partials/navigation";
-//@import "partials/navbar";
+@import "partials/carousel";
 
 @import "portlet/portlet_decorator";
 @import "portlet/portlet_interaction";
@@ -381,5 +381,156 @@
 			font-size: 1.5rem;
 			margin-top: 9.3125rem;
 		}
+	}
+}
+
+
+.portlet-forms {
+  text-align: center;
+
+  label.required-warning {
+    display: inline;
+  }
+
+  .lfr-ddm-form-pagination-controls .btn {
+    float: none !important;
+  }
+}
+
+// Compare Mini
+
+.portlet-commerce-product-compare-content-mini {
+	bottom: 0;
+	left: 14px;
+	position: fixed;
+	right: 14px;
+	z-index: $zindex-fixed;
+
+	@include media-breakpoint-up(md) {
+		left: 10%;
+		right: 10%;
+	}
+
+	.portlet {
+		margin-bottom: 0;
+	}
+}
+
+.compare-products-mini-header {
+	background-color: #F9F9F9;
+	border: 1px solid #DADADA;
+
+	@include border-top-radius($border-radius);
+}
+
+.lfr-compare-products-mini-header {
+	color: #272833;
+	display: block;
+	padding-bottom: 0.5rem;
+	padding-left: 1rem;
+	padding-top: 0.5rem;
+
+	&:hover {
+		color: #272833;
+		text-decoration: none;
+	}
+}
+
+.toggler-header-collapsed .collapse-icon-closed {
+	display: block;
+}
+
+.toggler-header-collapsed .collapse-icon-open {
+	display: none;
+}
+
+.lfr-compare-products-mini-content {
+	.card-page {
+		background-color: #FFF;
+		border-color: #DADADA;
+		border-style: solid;
+		border-width: 0 1px;
+		flex-wrap: nowrap;
+		margin-left: 0;
+		margin-right: 0;
+		overflow: auto;
+		padding-bottom: 1.5rem;
+		padding-top: 1rem;
+	}
+
+	.card-page-item {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		padding-left: $grid-gutter-width / 2;
+		padding-right: $grid-gutter-width / 2;
+		width: 200px;
+
+		.autofit-col-expand {
+			min-width: 6.25rem;
+		}
+
+		+ .card-page-item-shrink {
+			margin-left: auto;
+		}
+	}
+
+	.card-page-item-shrink {
+		width: auto;
+
+		+ .card-page-item-shrink {
+			margin-left: 0;
+		}
+	}
+
+	.card {
+		margin-bottom: 0;
+		width: 75px;
+
+		.aspect-ratio-item-fluid {
+			max-width: 64%;
+		}
+
+		.sticker {
+			align-items: center;
+			display: flex;
+			height: 1rem;
+			justify-content: center;
+			width: 1rem;
+
+			a {
+				display: block;
+
+				> span {
+					align-items: center;
+					background-color: $primary;
+					border-radius: $rounded-circle-border-radius;
+					color: #FFF;
+					display: flex;
+					height: 1rem;
+					justify-content: center;
+					width: 1rem;
+
+					.lexicon-icon {
+						height: 0.5rem;
+						width: 0.5rem;
+					}
+				}
+			}
+		}
+
+		.sticker-top-right {
+			right: 3px;
+			top: 3px;
+			z-index: 1;
+		}
+	}
+
+	.compare-link {
+		margin-left: 0.5rem;
+	}
+
+	.compare-add-more {
+		margin-right: auto;
 	}
 }
