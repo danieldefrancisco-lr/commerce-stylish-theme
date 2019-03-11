@@ -16,13 +16,14 @@
 
 <body class="${css_class}">
 
+
 <@liferay_util["include"] page=body_top_include />
 
 <@liferay.control_menu />
 
 <#if has_navigation || !is_signed_in>
 <div>
-        <div class="shoping-car">
+        <div class="shoping-car" id="b2b-mini-cart">
             <!--<@liferay.user_personal_bar />-->
 						<a aria-expanded="false" aria-haspopup="true" class="animate dropdown-toggle nav-link" data-toggle="dropdown" href="javascript:;" role="button">
 								<span class="commerce-navigation-icon inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-suitcase" focusable="false"><use xlink:href="${images_folder}/lexicon/icons.svg#suitcase" /></svg></span><span class="rounded-circle sticker sticker-dark sticker-lg sticker-success" id="b2b-mini-cart-items-count">${orderItemsQuantity}</span>
@@ -38,7 +39,7 @@
 </#if>
 
 <div class="pt-0" id="wrapper">
-	<section class="pt-0" id="content">
+	<section class="pt-0 ${portal_content_css_class}" id="content">
 		<#if show_example_content>
 			<#include "${full_templates_path}/temporal_content.ftl" />
 		</#if>
@@ -58,7 +59,7 @@
 		</#if>
 	</section>
 
-	<#if show_example_content>
+	<#if show_footer>
 		<#include "${full_templates_path}/footer.ftl" />
 	</#if>
 
@@ -70,9 +71,6 @@
 
 <script src="${javascript_folder}/vendor/jquery-easing/jquery.easing.js"></script>
 <script src="${javascript_folder}/vendor/stylish/stylish-portfolio.js"></script>
-
-<a href="${javascript_folder}/vendor/stylish/stylish-portfolio.js"> link to stylish-portfolio.js</a>
-<a href="${javascript_folder}/vendor/jquery-easing/jquery.easing.js"> link to jquery.easing.js</a>
 
 <#--  <script src="https://blackrockdigital.github.io/startbootstrap-stylish-portfolio/vendor/jquery-easing/jquery.easing.min.js"></script>
 <script src="https://blackrockdigital.github.io/startbootstrap-stylish-portfolio/js/stylish-portfolio.min.js"></script>  -->

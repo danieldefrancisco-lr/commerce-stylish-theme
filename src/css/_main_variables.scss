@@ -35,3 +35,12 @@ $commerce-order-items-body-list-group-subtitle: map-merge((
 
 $commerce-order-items-footer-bg: null !default;
 $commerce-order-items-footer-color: null !default;
+
+// Commerce Card
+
+$commerce-simple-card-title: () !default;
+$commerce-simple-card-title: map-merge((
+	color: $body-color,
+	font-size: 1.125rem,
+	font-weight: $font-weight-normal
+), $commerce-simple-card-title);

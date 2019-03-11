@@ -15,6 +15,7 @@
   show_logo_image = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-logo-image"))
   show_example_content = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-example-content"))
   show_footer = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-footer"))
+	wrap_content = getterUtil.getBoolean(themeDisplay.getThemeSetting("wrap-content"))
 />
 
 <#if commerceOrderHttpHelper.getCurrentCommerceOrder(request)??>
@@ -81,3 +82,9 @@
 		portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"
 	/>
 </#macro>
+
+<#if wrap_content>
+	<#assign portal_content_css_class = "container" />
+<#else>
+	<#assign portal_content_css_class = "" />
+</#if>
