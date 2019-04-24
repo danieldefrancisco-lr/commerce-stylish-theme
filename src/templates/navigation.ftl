@@ -1,9 +1,9 @@
-<a class="menu-toggle rounded" href="#">
-	<i class="fas fa-bars"></i>
-</a>
+<#if has_navigation && is_setup_complete>
+	<button aria-controls="navigationCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right" data-target="#navigationCollapse" data-toggle="collapse" type="button">
+		<span class="navbar-toggler-icon"></span>
+	</button>
 
-<nav class="navbar-stylish" id="sidebar-wrapper">
-		<@liferay.navigation_menu default_preferences="${freeMarkerPortletPreferences}" />
-		<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
-		<@liferay.search_bar default_preferences="${preferences}" />
-</nav>
+	<div aria-expanded="false" class="collapse navbar-collapse stylish-navigation-menu" id="navigationCollapse">
+		<@liferay.navigation_menu default_preferences="${preferences}" />
+	</div>
+</#if>

@@ -1,9 +1,9 @@
-.shoping-car {
-    position: fixed;
-    right: 4em;
-    z-index: 1;
-    margin-top: 0.7em;
-}
+// .shoping-car {
+//     position: fixed;
+//     right: 4em;
+//     z-index: 1;
+//     margin-top: 0.7em;
+// }
 
 .user-full-name {
     display: none;
@@ -12,4 +12,15 @@
 .dropdown-menu.dropdown-menu-right.portlet-flush.show {
   width: 100em;
   max-width: 33em;
+}
+
+.user-personal-bar {
+  .shopping-cart-wrapper {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+
+.shopping-cart-content-mini {
+  left: -24em;
 }
