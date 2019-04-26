@@ -43,7 +43,23 @@
 // some fixed to adapt the theme to lifeary portal
 @import "liferay_fixes";
 
+// Fix for blogs
+.portlet-blogs {
+	.widget-mode-detail {
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+	}
 
+	.aspect-ratio-bg-cover {
+		display: block;
+    overflow: hidden;
+    position: relative;
+		height: 31vh;
+		width: 48vw;
+		padding: 0;
+	}
+}
 
 // Cart Content Mini
 
